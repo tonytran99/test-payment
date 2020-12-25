@@ -62,14 +62,14 @@
 		if (this.isRunning == false) {
 			this.isRunning = true;
 			$.post(this.baseUrl+"api/request/do.json",
-				   // this.data,
-   				//    function(data) {
-				 	// if (data.error == 0) {
-				 	// 	document.location = data.mobile_url;
-				 	// } else {
-					//  	console.log(data);
-				 	// }
-				// }
+				   this.data,
+   				   function(data) {
+				 	if (data.error == 0) {
+				 		document.location = data.mobile_url;
+				 	} else {
+					 	console.log(data);
+				 	}
+				}
 			);
 		}
 	};
